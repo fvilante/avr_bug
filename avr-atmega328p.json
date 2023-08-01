@@ -19,11 +19,7 @@
   "pre-link-args": {
     "gcc": [
       "-mmcu=atmega328p",
-      "-Wl,--as-needed,--print-memory-usage,--detailed-mem-usage",
-      "-fpack-struct",
-	  "-fshort-enums",
-	  "-Wstack-usage=20",
-	  "-Wall","-Wextra","-fstack-usage"
+      "-Wl,--as-needed"
     ]
   },
   "target-c-int-width": "16",
