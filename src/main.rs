@@ -24,22 +24,6 @@ fn main() -> ! {
     let pins = arduino_hal::pins!(dp);
     let mut serial = arduino_hal::default_serial!(dp, pins, 57600);
 
-    /*
-    // Uncommenting this part changes the output of hmacs
-    use noble_secp256k1::awint::{cc, inlawi, inlawi_ty, Bits, InlAwi};
-    use noble_secp256k1::{BigNum, Curve};
-
-    let mut private_key = inlawi!(0x02_u512);
-    let curve = Curve::secp256k1();
-    let public_key = curve.multiply_simple(&mut private_key);
-
-    let mut buf = [0; 32];
-    public_key.x.to_u8_slice(&mut buf);
-    print_hex_arr_rev("x", &mut serial, &buf);
-    public_key.y.to_u8_slice(&mut buf);
-    print_hex_arr_rev("y", &mut serial, &buf);
-    */
-
     let h = hmac_sha256::HMAC::mac(b"hello", b"key");
     print_hex_arr(" mac", &mut serial, &h);
     let h = hmac_sha256::Hash::hash(b"hello");
