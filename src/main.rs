@@ -3,8 +3,6 @@
 
 use panic_halt as _;
 
-use arduino_hal::prelude::*;
-
 use core::fmt::Debug;
 use ufmt::uWrite;
 
@@ -15,18 +13,6 @@ where
 {
     ufmt::uwrite!(serial, "{} = ", tag).unwrap();
     for e in arr.iter() {
-        ufmt::uwrite!(serial, "{:02x}", *e).unwrap();
-    }
-    ufmt::uwrite!(serial, "\r\n").unwrap();
-}
-
-fn print_hex_arr_rev<S>(tag: &str, serial: &mut S, arr: &[u8])
-where
-    S: uWrite,
-    <S as uWrite>::Error: Debug,
-{
-    ufmt::uwrite!(serial, "{} = ", tag).unwrap();
-    for e in arr.iter().rev() {
         ufmt::uwrite!(serial, "{:02x}", *e).unwrap();
     }
     ufmt::uwrite!(serial, "\r\n").unwrap();
