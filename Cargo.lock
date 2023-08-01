@@ -32,7 +32,6 @@ dependencies = [
  "arduino-hal",
  "avr-device",
  "hmac-sha256",
- "noble-secp256k1",
  "panic-halt",
  "ufmt",
 ]
@@ -77,65 +76,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "awint"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3e325957171f6feee57061fe854fb3c347dc1e36240e100fdc973abb4d44295"
-dependencies = [
- "awint_core",
- "awint_macros",
-]
-
-[[package]]
-name = "awint_core"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6f9d84a5081cad56411318ac96378809215d740b29dd42d57d4060b86d504f7"
-dependencies = [
- "awint_internals",
- "const_fn",
-]
-
-[[package]]
-name = "awint_ext"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ca687b09eefe6ebbd28949b40678eab5a51e51f5398b4103e08d42be05ddca57"
-dependencies = [
- "awint_core",
- "awint_internals",
- "const_fn",
-]
-
-[[package]]
-name = "awint_internals"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12c0850bbc49e8f6eaa6c8c02dd864787cfb504a1becaba303266dec74f429e0"
-
-[[package]]
-name = "awint_macro_internals"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86a2b0e1ce0d31efffe212ccb024cdb7aac0c6014d24bf63ff642e42b5c4eaf2"
-dependencies = [
- "awint_core",
- "awint_ext",
- "proc-macro2",
- "triple_arena",
-]
-
-[[package]]
-name = "awint_macros"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "48e12a7d72b4b19507b0c849444573325f9add7808d86520f1e1c857ef7ea800"
-dependencies = [
- "awint_internals",
- "awint_macro_internals",
-]
-
-[[package]]
 name = "bare-metal"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -152,12 +92,6 @@ name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
-
-[[package]]
-name = "const_fn"
-version = "0.4.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fbdcdcb6d86f71c5e97409ad45898af11cbc995b4ee8112d59095a28d376c935"
 
 [[package]]
 name = "embedded-hal"
@@ -177,9 +111,9 @@ checksum = "723dce4e9f25b6e6c5f35628e144794e5b459216ed7da97b7c4b66cdb3fa82ca"
 
 [[package]]
 name = "hmac-sha256"
-version = "1.1.6"
+version = "1.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fc736091aacb31ddaa4cd5f6988b3c21e99913ac846b41f32538c5fae5d71bfe"
+checksum = "3688e69b38018fec1557254f64c8dc2cc8ec502890182f395dbb0aa997aa5735"
 
 [[package]]
 name = "nb"
@@ -195,14 +129,6 @@ name = "nb"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8d5439c4ad607c3c23abf66de8c8bf57ba8adcd1f129e699851a6e43935d339d"
-
-[[package]]
-name = "noble-secp256k1"
-version = "0.1.0"
-source = "git+https://github.com/xphoniex/noble-secp256k1-rs#cc4b0d9fb7fa3b97a50826d7585b6e6a10f509c4"
-dependencies = [
- "awint",
-]
 
 [[package]]
 name = "panic-halt"
@@ -256,12 +182,6 @@ dependencies = [
  "quote",
  "unicode-ident",
 ]
-
-[[package]]
-name = "triple_arena"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c004b803cd5b65973757ecf2a4bccc676a98a6c0e7063cc7d976ca3dee83ae3"
 
 [[package]]
 name = "ufmt"

@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 panic-halt = "0.2.0"
 ufmt = "0.1.0"
-noble-secp256k1 = { git = "https://github.com/xphoniex/noble-secp256k1-rs", default-features = false, features = ["8-bit"] }
+#noble-secp256k1 = { git = "https://github.com/xphoniex/noble-secp256k1-rs", default-features = false, features = ["8-bit"] }
 hmac-sha256 = { version = "1.1.6", default-features = false, features = ["opt_size"] }
 
 [dependencies.arduino-hal]
